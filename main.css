@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* custom properties */
+:root {
+  --leading: 2em;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+.hero-bg {
+  background: #66b3cf url("../images/bg.jpg");
+  background-position: 12% 83%; /* x and y */
+  color: white;
+  text-align: center;
+  padding-bottom: 4em;
+}
+
+.reg-bg {
+  background: #66b3cf;
+  background-position: 12% 83%; /* x and y */
+  color: white;
+  text-align: center;
+  margin-top: 1em;
+  padding-bottom: 4em;
+}
+
+header {
+  padding: 1em 0;
+}
+
+/* Use rem units for font sizes and em units for margin and padding */
+.hero-bg a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+section {
+  margin: 0 1em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 2em 0 1.2em;
+}
+
+h1 span {
+  text-transform: uppercase;
+  display: block; /* block sets it on its own line */
+  font-size: 1.4rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* needed to make position relative and z-index: 1 */
+h1 span::before {
+  content: " ";
+  position: absolute;
+  width: 3em;
+  background: #00bfff;
+  height: 0.4em;
+  bottom: 0;
+  z-index: -1;
+  margin-left: -0.3em;
+}
+
+.hero-bg p {
+  font-weight: bold;
+  margin: 0 1em 3em;
+}
+
+.form-container {
+  background-color: #66b3cf;
+  margin: 2em -1em 0;
+  padding: 2em;
+}
+
+label {
+  color: #055b77;
+  font-weight: bold;
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}
+
+input {
+  border: 2px solid #707070;
+  box-sizing: border-box;
+  border-radius: 0.55em;
+  margin-bottom: 1%;
+  width: 200px;
+  height: 30px;
+}
+
+input[type="text"] {
+  border: 2px solid #707070;
+  box-sizing: border-box;
+  border-radius: 0.55em;
+  margin-bottom: 1%;
+}
+
+input[type="searchbar"] {
+  border: 2px solid #707070;
+  box-sizing: border-box;
+  border-radius: 0.55em;
+  margin-bottom: 1%;
+  width: 300px;
+  height: 55px;
+}
+
+input[type="commentbox"] {
+  border: 2px solid #707070;
+  box-sizing: border-box;
+  border-radius: 0.55em;
+  margin-bottom: 1%;
+  width: 300px;
+  height: 55px;
+}
+
+.form-container p {
+  color: rgb(0, 0, 0);
+  margin-bottom: 1.5em;
+  font-weight: normal;
+  font-size: 0.9em;
+  margin-top: 0.3em;
+}
+
+input[type="button"] {
+  background-color: #ffa11c;
+  border: none;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  padding: 1em 0em;
+  border-radius: 0.5em;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+input[type="button"]:hover {
+  background-color: #da7f00;
+  font-weight: normal;
+}
+
+.right-col {
+  text-align: center;
+  margin: 3em 1em;
+}
+
+h2 {
+  text-transform: uppercase;
+  position: relative;
+}
+
+h2::before {
+  content: " ";
+  position: absolute;
+  width: 8em;
+  background: #00bfff;
+  height: 0.4em;
+  bottom: 0;
+  z-index: -1;
+  margin-left: -0.3em;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  line-height: var(--leading);
+}
+
+h3 {
+  text-transform: uppercase;
+  border: solid;
+  border-color: #f89104;
+  border-width: 4px;
+  padding: 0.5rem;
+}
+
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 10px;
+  width: 35%;
+  margin-bottom: 1.25em;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+
+.collapsed1-content {
+  padding: 0 10px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+h4 {
+  text-transform: uppercase;
+  border: solid;
+  border-color: aqua;
+  border-width: 2px;
+  padding: 0.5em;
+  margin: 1em;
+}
+
+ul,
+ol {
+  text-align: left;
+}
+
+.collapsed2-content {
+  padding: 0 10px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+  color: #ffca81;
+  place-content: center;
+  display: none;
+  opacity: 0;
+}
+
+.animate-overlay {
+  animation: overlay 3s forwards;
+}
+
+@media (min-width: 730px) {
+  section {
+    margin: 0 4em;
+  }
+
+  .form-container {
+    margin: 2em 0 0;
+  }
+}
+
+@media (min-width: 930px) {
+  .hero-bg {
+    text-align: left;
+  }
+  .hero-big p {
+    margin: 0 0 3em;
+  }
+
+  .hero-bg section {
+    width: 65%;
+  }
+
+  .form-container {
+    text-align: center;
+    margin: 2em 0 0;
+    padding: 2em;
+    border-radius: 0.5em;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0);
+  }
+
+  form {
+    display: flex;
+  }
+  .form-center {
+    width: 100%;
+  }
+
+  .form-center2 {
+    width: 25%;
+  }
+
+  .form-left {
+    width: 33%;
+  }
+  label {
+    margin: 0;
+  }
+  input[type="button"] {
+    height: fit-content;
+    font-size: 1.1em;
+    margin: 4px 2px;
+    padding: 16px 32px;
+    width: 30%;
+  }
+
+  .hero-bg p {
+    margin-bottom: 0;
+  }
+
+  img {
+    width: 70%;
+    margin-bottom: 8rem;
+  }
+
+  .why {
+    margin: 0 15em;
+  }
+}
+
+.top {
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5em);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes overlay {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link */
+a.button {
+  display: block;
+  background-color: #ffa11c;
+  text-align: center;
+  border: none;
+  width: 25%;
+  color: white;
+  font-weight: bold;
+  padding: 1em 0;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.5em;
+  font-size: 1.3em;
+  cursor: pointer;
+  background-color: #da7f00;
+  font-weight: normal;
+}
